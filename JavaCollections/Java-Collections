@@ -1,0 +1,521 @@
+1. What is collections?
+
+Ans:- Collections is a framework provided by java.
+
+This framework provides many interfaces and their implemented classes in order to store group of objects (elements) in a single entity.
+
+
+ --> Collections Framework
+       * Collection Interface
+             1. List Interface
+             2. Set Interface
+             3. Queue Interface
+        * Map Interface     
+       
+  
+ -> Class Provided by collection Framework 
+ 
+ * List Interface
+    1. ArryaList
+    2. LinkedList
+    3. Vector
+    4. Stack
+    
+ *  Queue Interface
+    1. ArryaQueue
+    2. PriorityQueue
+    
+ * Set Interface
+   1. HashSet
+   2.LinkedHasehSet
+   3.TreeSet
+   
+ * Collections 
+ 
+ * Map Interface
+   1. Hash Table
+   2. HashMap
+   3. LinkedHaseMap
+   4. TreeMap          
+   
+   
+   
+  *********************************************** ArryaList ************************************************* 
+  
+  
+** Use case :- Frequent read/access operations    
+  
+** The default initial capacity of an ArrayList is 10.
+
+** Memory Efficiency Less memory-efficient(extra Pointers)
+
+** insertion Deletion :- due to shifting  elements
+
+** Uses add() to insert elements. 
+
+** Accesses elements quickly with get().
+
+** Removing elements can be slower due to the need to shift elements.
+
+
+**  The default initial capacity of an ArrayList is 50.
+
+** Use Case:- Frequent insertions deletions 
+
+** Memory Efficiency :- Less memory-erricient(extraPointers)
+
+** insertion/Deletion :- for adding removing at the beginning/ end
+
+** 
+
+
+
+### 1. *Dynamic Storage*
+ArrayList is used when you need a collection that can grow and shrink dynamically. Unlike arrays with a fixed size, ArrayList can adjust its size automatically.
+
+### 2. *Random Access*
+ArrayList provides fast, random access to elements using an index. This makes it an excellent choice for scenarios where you need to retrieve elements frequently.
+
+### 3. *Data Collection and Manipulation*
+It’s ideal for collecting and manipulating data where the number of elements can change over time. Adding, removing, and updating elements is straightforward.
+
+### 4. *Iteration*
+ArrayList supports efficient iteration over its elements, making it convenient for looping through data, performing operations, or applying transformations.
+
+### 5. *Temporary Storage*
+It can be used for temporary storage of data, especially when dealing with intermediate results or as a buffer.
+
+### 6. *Replacement for Arrays*
+When the flexibility of dynamic resizing and more methods for manipulation are required, ArrayList serves as a more advanced alternative to traditional arrays
+   
+
+- ****************************************************  LinkedList   *************************************************: 
+  - Also uses add() to insert elements. 
+  - Accessing elements with get() is slower as it may require traversal.
+  - Removing elements is generally faster if done at the beginning or end
+  
+  
+1  *Dynamic Size*: Unlike arrays, LinkedList does not have a fixed size. It can grow and shrink as needed, which makes it suitable for applications where the number of elements is unknown or changes frequently.
+
+2. *Efficient Insertion and Deletion*: Inserting and deleting elements in a LinkedList can be more efficient compared to an ArrayList, especially when these operations are performed in the middle of the list. This is because, in a LinkedList, these operations do not require shifting elements.
+
+3. *Implements List and Deque Interfaces*: LinkedList implements both the List and Deque interfaces. This means it can be used both as a list and a queue, offering more flexibility in how it is used.
+
+4. *Traversal in Both Directions*: As a doubly-linked list, LinkedList allows traversal in both forward and backward directions. This can be particularly useful in certain applications.
+
+5. *Memory Usage*: While LinkedList offers certain performance benefits, it typically uses more memory than an ArrayList because each node stores a reference to both the next and previous nodes, as well as the data.
+
+6. *Use Cases*: Discuss scenarios where LinkedList is a better choice over ArrayList, such as in applications requiring frequent insertions and deletions, or where dynamic resizing is essential.
+
+
+1. *Adding Elements:*
+   - add(E e): Appends the specified element to the end of this list.
+   - add(int index, E element): Inserts the specified element at the specified position in this list.
+   - addFirst(E e): Inserts the specified element at the beginning of this list.
+   - addLast(E e): Appends the specified element to the end of this list.
+
+2. *Removing Elements:*
+   - remove(): Retrieves and removes the head (first element) of this list.
+   - remove(int index): Removes the element at the specified position in this list.
+   - remove(Object o): Removes the first occurrence of the specified element from this list, if it is present.
+   - removeFirst(): Removes and returns the first element from this list.
+   - removeLast(): Removes and returns the last element from this list.
+
+3. *Accessing Elements:*
+   - get(int index): Returns the element at the specified position in this list.
+   - getFirst(): Returns the first element in this list.
+   - getLast(): Returns the last element in this list.
+
+4. *Element Presence:*
+   - contains(Object o): Returns true if this list contains the specified element.
+   - indexOf(Object o): Returns the index of the first occurrence of the specified element in this list, or -1 if this list does not contain the element.
+   - lastIndexOf(Object o): Returns the index of the last occurrence of the specified element in this list, or -1 if this list does not contain the element.
+
+### Advanced Operations
+
+5. *Modifying Elements:*
+   - set(int index, E element): Replaces the element at the specified position in this list with the specified element.
+
+6. *Deque Operations:*
+   - offer(E e): Adds the specified element as the tail (last element) of this list.
+   - offerFirst(E e): Inserts the specified element at the front of this list.
+   - offerLast(E e): Inserts the specified element at the end of this list.
+   - poll(): Retrieves and removes the head (first element) of this list.
+   - pollFirst(): Retrieves and removes the first element of this list.
+   - pollLast(): Retrieves and removes the last element of this list.
+   - peek(): Retrieves, but does not remove, the head (first element) of this list.
+   - peekFirst(): Retrieves, but does not remove, the first element of this list.
+   - peekLast(): Retrieves, but does not remove, the last element of this list.
+
+7. *Others:*
+   - clear(): Removes all of the elements from this list.
+   - size(): Returns the number of elements in this list.
+   - isEmpty(): Returns true if this list contains no elements.
+   
+   
+   
+   
+*****************************************  Vector ******************************************  
+
+* It defaults to a capacity of 10.
+The user of Java Vectors is typically someone who needs a dynamically resizable array that is thread-safe for use in multi-threaded applications. Here are some use cases:
+
+* Multi-Threaded Environments*: When you need synchronized access to a list in a multi-threaded application.
+* Dynamic Resizing*: When the number of elements can change frequently and you want the collection to handle resizing automatically.
+* Legacy Systems*: When maintaining older Java code that already uses Vectors.
+
+
+********************************************  Stack ********************************************
+
+* The Stack class in Java is a part of the Java Collections Framework and extends Vector. It represents a last-in-first-out (LIFO) stack of objects. This means that the last element added to the stack is the first one to be removed.
+
+
+### Use Cases
+- *Expression Evaluation*: Used in algorithms to evaluate arithmetic expressions, particularly those involving parentheses.
+- *Backtracking Algorithms*: Useful in algorithms that require backtracking, such as maze-solving algorithms.
+- *Undo Mechanisms*: Commonly used to implement undo features in applications.
+
+### Key Characteristics
+- *LIFO (Last In, First Out)*: The last item added is the first to be removed.
+- *Synchronized*: Like Vector, Stack is thread-safe because its methods are synchronized.
+- *Extends Vector*: Inherits all the capabilities of Vector.
+
+### Basic Operations
+- *Pushing Elements*: Adding an element to the top of the stack.
+- *Popping Elements*: Removing the top element from the stack.
+- *Peeking*: Viewing the top element without removing it.
+- *Searching*: Finding the position of an element in the stack.
+
+### Methods of the Stack Class
+- push(E item): Pushes an item onto the top of the stack.
+- pop(): Removes and returns the top item of the stack.
+- peek(): Returns the top item of the stack without removing it.
+- empty(): Checks if the stack is empty.
+- search(Object o): Returns the 1-based position of the element in the stack.
+
+### Pros and Cons
+- *Pros*: Thread-safe, simple LIFO structure, useful for scenarios requiring stack behavior.
+- *Cons*: Slower due to synchronization, less flexibility compared to other modern collections.
+
+
+
+
+
+
+==========================================   Set  =========================================
+
+****************************************   HashSet   ************************************************
+
+The HashSet class is part of the Java Collections Framework and implements the Set interface. It uses a hash table for storing elements and provides a collection that contains no duplicate elements.
+
+### Key Characteristics
+- *No Duplicates*: Ensures that no duplicate elements are stored.
+- *Unordered*: Does not maintain any order of the elements.
+- *Allows Null*: Can store a single null element.
+- *Constant Time Performance*: Offers average constant time performance for basic operations like add, remove, and contains.
+
+### Basic Operations
+- *Creating a HashSet*:
+  java
+  HashSet<String> hashSet = new HashSet<>();
+  
+
+- *Adding Elements*:
+  java
+  hashSet.add("Element 1");
+  hashSet.add("Element 2");
+  
+
+- *Checking for Elements*:
+  java
+  boolean contains = hashSet.contains("Element 1"); // Returns true if the element is present
+  
+
+- *Removing Elements*:
+  java
+  hashSet.remove("Element 1"); // Removes the specified element
+  
+
+### Key Methods
+- add(E e): Adds the specified element to the set if it is not already present.
+- contains(Object o): Returns true if the set contains the specified element.
+- remove(Object o): Removes the specified element from the set if it is present.
+- size(): Returns the number of elements in the set.
+- clear(): Removes all the elements from the set.
+
+### Pros and Cons
+- *Pros*: Fast performance for basic operations, no duplicate elements allowed.
+- *Cons*: Does not maintain any order of elements, not synchronized (not thread-safe).
+
+### Use Cases
+- *Unique Collections*: When you need to maintain a collection of unique elements.
+- *Set Operations*: Useful for set operations like union, intersection, and difference.
+- *Fast Lookup*: Suitable for scenarios requiring fast lookups of elements.
+
+The HashSet class is a versatile collection that is often used when the uniqueness of elements and performance are priorities. It’s particularly useful for tasks where order is not important, but quick access and storage of unique elements are needed.
+
+
+
+
+***************************************************  LinkedHashSet   ********************************************************
+### Java Collections: LinkedHashSet
+
+The LinkedHashSet class is part of the Java Collections Framework and extends the HashSet class. It maintains a linked list of the entries in the set, which defines the order in which elements were inserted. This insertion-order iteration allows for predictable iteration order.
+
+### Key Characteristics
+- *No Duplicates*: Ensures no duplicate elements are stored.
+- *Insertion-Order*: Maintains the order in which elements were added.
+- *Allows Null*: Can store one null element.
+- *Moderate Performance*: Offers good performance with additional overhead due to maintaining insertion order.
+
+### Pros and Cons
+- *Pros*: Maintains insertion order, provides all the benefits of HashSet with predictable iteration order.
+- *Cons*: Slightly slower than HashSet due to the overhead of maintaining insertion order, not synchronized (not thread-safe).
+
+### Use Cases
+- *Unique Collections*: When you need to maintain a collection of unique elements with predictable iteration order.
+- *Cache Implementations*: Useful for caching data where access order is important.
+- *Maintaining Order*: Suitable for scenarios where the order of elements matters, such as maintaining logs or histories.
+
+
+*******************************************************************   TreeSet  ****************************************************
+
+* The TreeSet class is part of the Java Collections Framework and implements the Set interface. It uses a tree for storage, specifically a Red-Black tree, which ensures that the elements are stored in a sorted and ordered manner.
+
+### Key Characteristics
+- *No Duplicates*: Ensures no duplicate elements are stored.
+- *Sorted Order*: Elements are stored in their natural order or according to a specified comparator.
+- *NavigableSet Interface*: Implements the NavigableSet interface, providing methods for navigation.
+- *Null Handling*: Cannot store null elements.
+
+### Key Methods
+- add(E e): Adds the specified element to the set if it is not already present.
+- contains(Object o): Returns true if the set contains the specified element.
+- remove(Object o): Removes the specified element from the set if it is present.
+- first(): Returns the first (lowest) element.
+- last(): Returns the last (highest) element.
+- pollFirst(): Retrieves and removes the first element.
+- pollLast(): Retrieves and removes the last element.
+
+### Pros and Cons
+- *Pros*: Maintains elements in sorted order, provides efficient navigation methods, supports range view and ordering.
+- *Cons*: Slower than HashSet due to the overhead of maintaining order, not synchronized (not thread-safe).
+
+### Use Cases
+- *Sorted Collections*: When you need a collection of unique elements in sorted order.
+- *Navigable Data*: Suitable for scenarios where you need to navigate through the set or access elements in a specific order.
+- *Range Views*: Useful for obtaining views of subsets of data, such as headsets, tailsets, and subSets.
+
+
+
+===========================================  Map Interface =======================================================
+
+******************************************   HashTable ==========================================================
+
+### *Characteristics of Hashtable*
+1. *Thread-Safety*: Hashtable is synchronized, which means it is thread-safe and can be used in a multi-threaded environment without additional synchronization.
+2. *No Nulls*: Hashtable does not allow null keys or null values. Trying to insert such entries will throw a NullPointerException.
+3. *Key-Value Mapping*: Each key is mapped to exactly one value. If you try to insert a duplicate key, the old value associated with the key will be replaced by the new value.
+
+### *Common Methods*
+Here are some common methods provided by the Hashtable class:
+
+- *put(K key, V value)*: Adds a key-value pair to the hashtable.
+
+- *get(Object key)*: Retrieves the value associated with the specified key.
+
+- *remove(Object key)*: Removes the key (and its corresponding value) from the hashtable.
+
+- *size()*: Returns the number of key-value pairs in the hashtable.
+
+- *containsKey(Object key)*: Checks if the hashtable contains the specified key.
+
+- *containsValue(Object value)*: Checks if the hashtable contains the specified value.
+
+- *isEmpty()*: Checks if the hashtable is empty.
+
+- *clear()*: Clears the hashtable, removing all key-value pairs.
+
+### *When to Use Hashtable*
+- *Thread Safety*: Use Hashtable when you need a thread-safe implementation without additional synchronization.
+- *Compatibility*: It's a good choice if you're working with legacy code that uses Hashtable.
+
+
+
+
+
+
+
+
+==================================================HashMap ============================================
+### Key Concepts of HashMap:
+
+1. *Basics:*
+   - Part of the Java Collections Framework.
+   - Implements the Map interface.
+   - Allows one null key and multiple null values.
+   - Not synchronized, hence not thread-safe but faster compared to Hashtable.
+
+2. *Internal Working:*
+   - Based on a hash table.
+   - Uses hashing to store key-value pairs.
+   - Collisions are resolved using linked lists or trees (in JDK 8 and later).
+
+3. *Performance:*
+   - Average time complexity for basic operations (get, put, remove) is O(1).
+   - Performance can degrade to O(n) in worst-case scenarios (e.g., when multiple keys hash to the same bucket).
+   - Capacity and Load Factor affect performance. The default load factor is 0.75.
+
+4. *Constructors:*
+   - HashMap() – Initializes an empty HashMap.
+   - HashMap(int initialCapacity) – Initializes HashMap with specified initial capacity.
+   - HashMap(int initialCapacity, float loadFactor) – Initializes HashMap with specified capacity and load factor.
+   - HashMap(Map<? extends K, ? extends V> m) – Initializes HashMap with the mappings of the specified map.
+
+5. *Important Methods:*
+   - put(K key, V value): Associates the specified value with the specified key.
+   - get(Object key): Returns the value to which the specified key is mapped.
+   - remove(Object key): Removes the mapping for a key.
+   - containsKey(Object key): Checks if the map contains a mapping for the specified key.
+   - containsValue(Object value): Checks if the map contains the specified value.
+   - clear(): Removes all the mappings from the map.
+   - size(): Returns the number of key-value mappings in the map.
+   - keySet(), entrySet(), values(): Returns the set of keys, set of entries, and collection of values respectively.
+
+6. *Iteration:*
+   - Can iterate over keys, values, or entries.
+   - Commonly used with enhanced for loop or Iterator.
+
+7. *Common Use Cases:*
+   - Lookup/Cache implementation.
+   - Counting frequencies of elements.
+   - Grouping data by keys.
+
+
+===============================================LinkedHashMap=======================================
+
+### Main Points for Interviews:
+
+1. *Order Preservation:* Understand that LinkedHashMap maintains a predictable iteration order, which can be either insertion order or access order.
+2. *Usage Scenarios:* Use it when you need a combination of fast lookups and predictable iteration order. It is often used in caching, where you want to maintain access order to implement LRU (Least Recently Used) cache.
+3. *Performance:* Know that while it has O(1) time complexity for basic operations, the overhead for maintaining order makes it slightly less efficient than HashMap.
+4. *Constructors:* Be familiar with the various constructors and their parameters, especially the accessOrder parameter.
+5. *Null Handling:* Similar to HashMap, it allows null keys and values.
+
+
+### LinkedHashMap Overview
+
+1. *Definition:*
+   - Part of the Java Collections Framework.
+   - Extends HashMap and implements the Map interface.
+   - Maintains a doubly-linked list running through all its entries, which defines the iteration ordering.
+
+2. *Key Features:*
+   - *Order Preservation:* Maintains insertion order or access order, which means the order in which elements were added or accessed (depending on the constructor used).
+   - *Nulls Allowed:* Allows null values and one null key.
+   - *Not Synchronized:* Like HashMap, it is not thread-safe.
+
+3. *Constructors:*
+   - LinkedHashMap(): Initializes an empty LinkedHashMap.
+   - LinkedHashMap(int initialCapacity): Initializes LinkedHashMap with the specified initial capacity.
+   - LinkedHashMap(int initialCapacity, float loadFactor): Initializes LinkedHashMap with the specified initial capacity and load factor.
+   - LinkedHashMap(int initialCapacity, float loadFactor, boolean accessOrder): Initializes LinkedHashMap with the specified capacity, load factor, and access order.
+   - LinkedHashMap(Map<? extends K, ? extends V> m): Initializes LinkedHashMap with the mappings from the specified map.
+
+4. *Performance:*
+   - Similar to HashMap, basic operations (get, put, remove) have constant time complexity O(1), with additional overhead for maintaining the linked list.
+
+
+
+==============================================  TreeMap ================================================================
+### Main Points for Interviews:
+
+1. *Sorted Order:* Understand that TreeMap maintains the sorted order of keys, either natural ordering or by a custom comparator.
+2. *Implementation:* It is implemented as a Red-Black Tree, which provides efficient log(n) time complexity for key operations.
+3. *Key Constraints:* TreeMap does not allow null keys, but allows null values.
+4. *Common Use Cases:* Use it when you need a map with sorted keys, such as in range queries, navigation methods, or when a predictable iteration order is required.
+5. *Important Methods:*
+   - put(K key, V value): Associates the specified value with the specified key.
+   - get(Object key): Returns the value to which the specified key is mapped.
+   - remove(Object key): Removes the mapping for a key.
+   - containsKey(Object key): Checks if the map contains a mapping for the specified key.
+   - containsValue(Object value): Checks if the map contains the specified value.
+   - firstKey(), lastKey(): Returns the first and last keys in the map.
+   - subMap(K fromKey, K toKey): Returns a view of the portion of this map whose keys range from fromKey, inclusive, to toKey, exclusive.
+   - headMap(K toKey), tailMap(K fromKey): Returns a view of the portion of this map whose keys are less than toKey or greater than or equal to fromKey.
+
+
+### TreeMap Overview
+
+1. *Definition:*
+   - Part of the Java Collections Framework.
+   - Implements the NavigableMap interface, which is a sub-interface of SortedMap.
+   - Based on a Red-Black Tree structure.
+   
+2. *Key Features:*
+   - *Sorted Order:* Keys are sorted according to their natural ordering or by a specified comparator.
+   - *No Null Keys:* Does not allow null keys, though null values are permitted.
+   - *Not Synchronized:* Similar to other collections, TreeMap is not thread-safe.
+
+3. *Performance:*
+   - Provides guaranteed log(n) time cost for the basic operations (containsKey, get, put, remove).
+   
+4. *Constructors:*
+   - TreeMap(): Creates an empty tree map that will be sorted using the natural order of its keys.
+   - TreeMap(Comparator<? super K> comparator): Creates an empty tree map that will be sorted according to the specified comparator.
+   - TreeMap(Map<? extends K, ? extends V> m): Creates a tree map with the same mappings as the given map.
+   - TreeMap(SortedMap<K, ? extends V> m): Creates a tree map with the same mappings and the same ordering as the specified sorted map.
+   
+   
+   
+================================================  Queue Interface ====================================================================
+
+************************************************   PriorityQueue *********************************************************************
+
+### Key Features
+- *Ordered Elements*: Elements are ordered based on their natural ordering (Comparable) or a custom comparator.
+- *Heap-Based*: Internally, PriorityQueue is implemented using a binary heap.
+- *No Null Elements*: Null elements are not permitted.
+- *Unbounded Queue*: It grows dynamically as elements are added.
+
+### Common Methods
+- *Adding Elements*: add(), offer()
+- *Removing Elements*: remove(), poll()
+- *Accessing Elements*: peek(), element()
+- *Size*: size(), isEmpty()
+
+
+===========================================   ArryaQueue =======================================================
+### Key Points About ArrayDeque
+1. *Resizable Array*: Automatically grows to accommodate more elements.
+2. *Double-Ended Queue*: Supports adding and removing elements from both ends.
+3. *No Null Elements*: Does not allow null elements to prevent NullPointerException.
+4. *Performance*: Generally faster than LinkedList for queue operations and Stack for stack operations.
+5. *Not Thread-Safe*: It is not synchronized, so it is not safe for concurrent use without external synchronization.
+
+### Example Code
+Here's a simple example of how to use ArrayDeque:
+
+### Interview Tips
+For interview purposes, focus on:
+1. *Operations*: Understand how to add, remove, and access elements from both ends.
+2. *Use Cases*: Highlight scenarios where ArrayDeque is more efficient than LinkedList and Stack.
+3. *Concurrency*: Mention that ArrayDeque is not thread-safe and discuss alternatives for thread safety.
+
+### Common Interview Questions
+1. *What is ArrayDeque and how does it differ from other collections like LinkedList and Stack?*
+2. *Why is ArrayDeque typically more efficient than LinkedList for queue operations?*
+3. *How do you ensure thread safety when using ArrayDeque?*
+
+   
+
+
+
+ 
+
+
+  
+
+
+       
+ 
